@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Shastri&#x27;s blog - Personal</title>
+    <subtitle>A robust, elegant dark theme</subtitle>
+    <link href="https://theshasri.xyz/categories/personal/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://theshasri.xyz"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-19T00:00:00+00:00</updated>
+    <id>https://theshasri.xyz/categories/personal/atom.xml</id>
+    <entry xml:lang="en">
+        <title>My First Blog</title>
+        <published>2023-09-19T00:00:00+00:00</published>
+        <updated>2023-09-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://theshasri.xyz/myfirstblog/" type="text/html"/>
+        <id>https://theshasri.xyz/myfirstblog/</id>
+        
+        <summary type="html">&lt;p&gt;It&#x27;s about 1:28 AM, and I&#x27;m writing my very first blog. For the past month, I&#x27;ve been thinking about
+starting a blog, but I kept procrastinating and wasting my time. I knew I was wasting my time, but I
+just couldn&#x27;t find the motivation to begin. It felt like I was stuck, unable to start. I tried
+learning some technologies, but nothing changed. And today, for God&#x27;s sake, somehow I got the
+motivation to start this. Right now, I&#x27;ve almost covered the technical part of it. </summary>
+        
+    </entry>
+</feed>
