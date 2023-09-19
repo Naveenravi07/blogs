@@ -1,6 +1,6 @@
 base_url = "https://theshasri.xyz"
 compile_sass = true
-title = "after-dark theme"
+title = "Shastri's blog"
 description = "A robust, elegant dark theme"
 generate_feed = true
 theme = "after-dark"
