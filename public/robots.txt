@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://theshasri.xyz/sitemap.xml
+Sitemap: https://theshasri.xyz/blogs/sitemap.xml
