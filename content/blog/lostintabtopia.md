@@ -3,9 +3,16 @@ title = "Lost in Tabtopia? Vim Saved Me (and My Sanity)"
 date = 2023-12-26
 sort_by="date"
 
-[taxonomies]
-categories = ["Technology"]
-tags = ["Technology"]
+taxonomies.tags = [
+    "Linux",
+    "Neovim",
+    "Workflow",
+    "Technology",
+]
+taxonomies.categories = [
+    "Technology",
+]
+
 +++
 
 To be honest, I was also a heavy mouse user. I started using Windows when I was

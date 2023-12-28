@@ -2,9 +2,12 @@
 title = "My First Blog"
 date = 2023-09-19
 
-[taxonomies]
-categories = ["Personal"]
-tags = ["Personal"]
+taxonomies.tags = [
+    "Personal",
+]
+taxonomies.categories = [
+    "Personal"
+]
 +++
 
 It's about 1:28 AM, and I'm writing my very first blog. For the past month, I've been thinking about
