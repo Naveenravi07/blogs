@@ -5,7 +5,7 @@ sort_by="date"
 
 taxonomies.tags = [
     "Linux",
-    "Vim",
+    "Nvim",
     "Workflow",
     "Technology",
 ]
