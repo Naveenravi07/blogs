@@ -4,6 +4,17 @@
         <loc>https://theshastri.xyz/blogs/</loc>
     </url>
     <url>
+        <loc>https://theshastri.xyz/blogs/blog/</loc>
+    </url>
+    <url>
+        <loc>https://theshastri.xyz/blogs/blog/lostintabtopia/</loc>
+        <lastmod>2023-12-26</lastmod>
+    </url>
+    <url>
+        <loc>https://theshastri.xyz/blogs/blog/myfirstblog/</loc>
+        <lastmod>2023-09-19</lastmod>
+    </url>
+    <url>
         <loc>https://theshastri.xyz/blogs/categories/</loc>
     </url>
     <url>
@@ -13,23 +24,21 @@
         <loc>https://theshastri.xyz/blogs/categories/technology/</loc>
     </url>
     <url>
-        <loc>https://theshastri.xyz/blogs/myfirstblog/</loc>
-        <lastmod>2023-09-19</lastmod>
-    </url>
-    <url>
-        <loc>https://theshastri.xyz/blogs/nomouserevolution/</loc>
-        <lastmod>2023-12-26</lastmod>
-    </url>
-    <url>
-        <loc>https://theshastri.xyz/blogs/page/1/</loc>
-    </url>
-    <url>
         <loc>https://theshastri.xyz/blogs/tags/</loc>
+    </url>
+    <url>
+        <loc>https://theshastri.xyz/blogs/tags/linux/</loc>
     </url>
     <url>
         <loc>https://theshastri.xyz/blogs/tags/personal/</loc>
     </url>
     <url>
         <loc>https://theshastri.xyz/blogs/tags/technology/</loc>
+    </url>
+    <url>
+        <loc>https://theshastri.xyz/blogs/tags/vim/</loc>
+    </url>
+    <url>
+        <loc>https://theshastri.xyz/blogs/tags/workflow/</loc>
     </url>
 </urlset>

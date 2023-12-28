@@ -1,19 +1,17 @@
 base_url = "https://theshastri.xyz/blogs"
 compile_sass = true
-title = "Shastri's blog"
-description = "A robust, elegant dark theme"
 generate_feed = true
-theme = "after-dark"
+theme = "hook"
+title="Shastri's Blogs"
+
 taxonomies = [
-    {name = "categories", feed = true},
-    {name = "tags", feed = true},
+  {name = "categories"},
+  {name = "tags"},
 ]
 
 [extra]
-author = "Naveen "
-after_dark_menu = [
-    {url = "$BASE_URL", name = "Home"},
-    {url = "$BASE_URL/categories", name = "Categories"},
-    {url = "$BASE_URL/tags", name = "Tags"},
+links = [
+    { title = "Home", href = "https://theshastri.xyz/blogs" },
+    { title = "Categories", href = "https://theshastri.xyz/blogs/categories" },
+    { title = "Tags", href = "https://theshastri.xyz/blogs/tags" },
 ]
-after_dark_title = "Shastri's Blog"
