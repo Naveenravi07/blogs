@@ -15,8 +15,8 @@ taxonomies.categories = [
 
 +++
 
-In my following article(s), I want to tell you why i switchedfrom 
-an **IDE** (Integrated Development Environment) to a **PDE** (Personal Development Environment)
+In my following article, I want to tell you why i switched from 
+an **IDE** (Integrated Development Environment) to a **PDE** (Personalized Development Environment)
 
 I started programming when i was 16 and i was the script kiddo (still same <3).
 I used VSCode and windows everyday for programming . The junky bloated electron
@@ -34,16 +34,15 @@ for switching tabs, browsing the internet, and programming. Switching between
 tabs in windows and finding the right one was the worst. It felt like a nightmare. I had
 to decide where to go from the list of applications when I press ALT+TAB. 
 Also I didn't have any previous experience with Linux other than just using it
-inside a virtual machine for 30 minutes. The next day, I installed Linux Mint 
-as my primary operating system and started my Linux journey.
-
+inside a virtual machine for 30 minutes. The next day I made the best decison in my life,
+I installed Linux Mint as my primary operating system and started my Linux journey.
 Fast forward to today, here are the major changes that happened to me.
 
 <h2>1 Text Editing </h2> 
 <img src="https://theshastri.s3.us-west-1.amazonaws.com/noevim.jpg" />
 Speaking of programming in VSCode, I didn't remember many shortcuts,
 except for Ctrl+P, Ctrl+F, and Ctrl+Shift+F. I know there are a few 
-more, but the editor itself didn't compel me to use them. I was so lazy 
+more, but the editor itself didn't compelled me to use them. I was so lazy 
 that I even opened the definition of a function by clicking the function 
 name with Ctrl pressed, rather than just reading the docs and pressing F12.
 I know that this sounds like a real skill issue but most of the people i know 

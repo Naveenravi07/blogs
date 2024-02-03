@@ -22,8 +22,8 @@
         <link rel="alternate" type="text/html" href="https://theshastri.xyz/blogs/blog/why-should-you-need-switch-from-an-ide-to-pde-right-now/"/>
         <id>https://theshastri.xyz/blogs/blog/why-should-you-need-switch-from-an-ide-to-pde-right-now/</id>
         
-        <content type="html" xml:base="https://theshastri.xyz/blogs/blog/why-should-you-need-switch-from-an-ide-to-pde-right-now/">&lt;p&gt;In my following article(s), I want to tell you why i switchedfrom 
-an &lt;strong&gt;IDE&lt;&#x2F;strong&gt; (Integrated Development Environment) to a &lt;strong&gt;PDE&lt;&#x2F;strong&gt; (Personal Development Environment)&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://theshastri.xyz/blogs/blog/why-should-you-need-switch-from-an-ide-to-pde-right-now/">&lt;p&gt;In my following article, I want to tell you why i switched from 
+an &lt;strong&gt;IDE&lt;&#x2F;strong&gt; (Integrated Development Environment) to a &lt;strong&gt;PDE&lt;&#x2F;strong&gt; (Personalized Development Environment)&lt;&#x2F;p&gt;
 &lt;p&gt;I started programming when i was 16 and i was the script kiddo (still same &amp;lt;3).
 I used VSCode and windows everyday for programming . The junky bloated electron
 app always ate my memmory and made my programming sessions worse.&lt;&#x2F;p&gt;
@@ -38,14 +38,14 @@ for switching tabs, browsing the internet, and programming. Switching between
 tabs in windows and finding the right one was the worst. It felt like a nightmare. I had
 to decide where to go from the list of applications when I press ALT+TAB. 
 Also I didn&#x27;t have any previous experience with Linux other than just using it
-inside a virtual machine for 30 minutes. The next day, I installed Linux Mint 
-as my primary operating system and started my Linux journey.&lt;&#x2F;p&gt;
-&lt;p&gt;Fast forward to today, here are the major changes that happened to me.&lt;&#x2F;p&gt;
+inside a virtual machine for 30 minutes. The next day I made the best decison in my life,
+I installed Linux Mint as my primary operating system and started my Linux journey.
+Fast forward to today, here are the major changes that happened to me.&lt;&#x2F;p&gt;
 &lt;h2&gt;1 Text Editing &lt;&#x2F;h2&gt; 
 &lt;img src=&quot;https:&#x2F;&#x2F;theshastri.s3.us-west-1.amazonaws.com&#x2F;noevim.jpg&quot; &#x2F;&gt;
 Speaking of programming in VSCode, I didn&#x27;t remember many shortcuts,
 except for Ctrl+P, Ctrl+F, and Ctrl+Shift+F. I know there are a few 
-more, but the editor itself didn&#x27;t compel me to use them. I was so lazy 
+more, but the editor itself didn&#x27;t compelled me to use them. I was so lazy 
 that I even opened the definition of a function by clicking the function 
 name with Ctrl pressed, rather than just reading the docs and pressing F12.
 I know that this sounds like a real skill issue but most of the people i know 
