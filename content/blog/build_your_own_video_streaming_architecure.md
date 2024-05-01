@@ -2,10 +2,10 @@
 title = "Build your own video streaming architecture and save yourselves from getting broke"
 date =2024-05-01 
 taxonomies.tags = [
-    "Personal",
+    "Technology",
 ]
 taxonomies.categories = [
-    "Personal"
+    "Technology",
 ]
 +++
 
