@@ -1,5 +1,5 @@
 +++
-title = "Build your own video streaming architecture and save yourselves from getting broke"
+title = "Build your own video processing and streaming architecture"
 date =2024-05-01 
 taxonomies.tags = [
     "Technology",
