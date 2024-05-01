@@ -1,7 +1,6 @@
 +++
 title = "Build your own video streaming architecture and save yourselves from getting broke"
-date = 2023-09-19
-
+date =2024-05-01 
 taxonomies.tags = [
     "Personal",
 ]
