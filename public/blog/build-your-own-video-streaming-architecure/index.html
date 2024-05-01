@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Shastri&#x27;s Blogs | Build your own video streaming architecture and save yourselves from getting broke</title>
+    
+    <link rel="stylesheet" href="https://theshastri.xyz/blogs/style.css?h=5c5abba3a670f76f59be">
+    
+    
+    
+    <link rel="alternate" type="application/atom+xml" title="Feed" href="https://theshastri.xyz/blogs/atom.xml">
+    
+    
+</head>
+<body>
+    
+<header class="space">
+    <a href="https:&#x2F;&#x2F;theshastri.xyz&#x2F;blogs">&LeftArrow; Home</a>
+</header>
+
+    
+<main>
+    <h1>Build your own video streaming architecture and save yourselves from getting broke</h1>
+    
+    <p class="secondary">19 September, 2023</p>
+    
+    <div class="space"></div>
+    <p>Hey everyone,</p>
+<p>I'm thrilled to share a recent milestone in my personal project journey:
+completing a significant aspect of my video processing infrastructure. I've
+always been fascinated by the mechanics behind platforms like YouTube, which
+seamlessly process video files into multiple qualities in a highly scalable
+manner. While AWS MediaConvert is a popular choice for this task, I've
+discovered a cost-effective alternative that I'm excited to share with you.
+Let's delve into the architecture of my implementation</p>
+<p>Note : In the below diagram there are some basic steps which i dont include in this blog.
+Like creation of preSignedUrl and all as the primary goal of this blog is to
+share the core concepts. So lets dive in</p>
+<img src="https://theshastri.s3.us-west-1.amazonaws.com/videostreamingarchitecture.png" />
+<pre><code>1) Uploading Process: When a user uploads a video, the file is stored in a
+development S3 bucket.
+
+2) Event Handling: Within the S3 environment, we set up event listeners to
+track actions like uploads. Upon each upload event, metadata from the S3
+request is added to an SQS queue. Once the queue reaches a certain
+threshold, a Lambda function is triggered. This queue mechanism ensures
+robustness in handling events, especially in case of errors during Lambda
+execution.
+
+3) The Lambda Function: This function plays a crucial role in orchestrating the
+video processing workflow. It initiates a spot EC2 instance remotely and
+communicates instructions to it. Leveraging spot instances for video
+processing can significantly reduce costs, particularly for
+non-time-sensitive tasks like video transcoding. However, it&#x27;s important to
+consider instance availability and potential interruptions.
+
+4)Processing Instructions: Instructions passed to the EC2 instance typically
+involve a shell script. This script downloads the video from the development
+bucket and utilizes FFmpeg, a versatile tool for video processing. FFmpeg is
+employed to transcode the video into HLS (HTTP Live Streaming) compatible
+streams of varying qualities. The processed video is then uploaded to a
+production S3 bucket.
+
+5) Content Delivery Network (CDN): To ensure optimal delivery speed, HLS
+streams are served from a CDN rather than directly from the production
+bucket. A CDN is a network of distributed proxy servers and data centers
+strategically positioned to minimize latency and maximize performance for
+end-users
+</code></pre>
+<p>This setup forms the backbone of my video processing infrastructure. I'm eagerly
+anticipating its performance and look forward to further enhancements. In the
+pipeline, I plan to integrate additional features such as subtitle generation to
+enrich the viewing experience. Stay tuned for updates as this project evolves!</p>
+
+</main>
+
+<footer>
+    Published
+    
+    
+    in <a href="https://theshastri.xyz/blogs/categories/personal/">Personal</a>
+    
+    
+    and
+    tagged
+    
+    <a href="https://theshastri.xyz/blogs/tags/personal/">Personal</a>
+    
+    
+    
+
+</footer>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://theshastri.xyz/blogs/dark_mode.svg" width="24" height="24" alt="Dark mode" aria-label="dark mode toggle" title="Dark mode"></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://theshastri.xyz/blogs/light_mode.svg" width="24" height="24" alt="Light mode" aria-label="light mode toggle" title="Light mode"></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>
