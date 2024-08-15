@@ -1,6 +1,6 @@
 base_url = "https://blogs.theshastrispace.xyz"
 compile_sass = true
-generate_feed = true
+generate_feeds = true
 theme = "hook"
 title = "Shastri's Blogs"
 
