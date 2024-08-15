@@ -1,4 +1,4 @@
-base_url = "https://theshastri.xyz/blogs"
+base_url = "https://blogs.theshastrispace.xyz"
 compile_sass = true
 generate_feed = true
 theme = "hook"
@@ -11,7 +11,7 @@ taxonomies = [
 
 [extra]
 links = [
-    { title = "Home", href = "https://theshastri.xyz/blogs" },
-    { title = "Categories", href = "https://theshastri.xyz/blogs/categories" },
-    { title = "Tags", href = "https://theshastri.xyz/blogs/tags" },
+    { title = "Home", href = "https://blogs.theshastrispace.xyz" },
+    { title = "Categories", href = "/https://blogs.theshastrispace.xyz/categories" },
+    { title = "Tags", href = "https://blogs.theshastrispace.xyz/tags" },
 ]
