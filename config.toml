@@ -1,8 +1,8 @@
 base_url = "https://blogs.theshastrispace.xyz"
 compile_sass = true
-generate_feeds = true
+generate_feed = true
 theme = "hook"
-title = "Shastri's Blogs"
+title="Shastri's Blogs"
 
 taxonomies = [
   {name = "categories"},
@@ -11,8 +11,7 @@ taxonomies = [
 
 [extra]
 links = [
-    { title = "Home", href = "/" },
-    { title = "Categories", href = "/categories" },
-    { title = "Tags", href = "/tags" },
+    { title = "Home", href = "https://blogs.theshastrispace.xyz" },
+    { title = "Categories", href = "/https://blogs.theshastrispace.xyz/categories" },
+    { title = "Tags", href = "https://blogs.theshastrispace.xyz/tags" },
 ]
-
