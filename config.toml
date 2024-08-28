@@ -11,7 +11,7 @@ taxonomies = [
 
 [extra]
 links = [
-    { title = "Home", href = "https://blogs.theshastrispace.xyz" },
-    { title = "Categories", href = "/https://blogs.theshastrispace.xyz/categories" },
-    { title = "Tags", href = "https://blogs.theshastrispace.xyz/tags" },
+    { title = "Home", href = "https://naveenravi07.github.io/blogs/" },
+    { title = "Categories", href = "https://naveenravi07.github.io/blogs/categories" },
+    { title = "Tags", href = "https://naveenravi07.github.io/blogs/tags" },
 ]
