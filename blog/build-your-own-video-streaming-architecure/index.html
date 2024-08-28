@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Shastri&#x27;s Blogs | Build your own video processing and streaming architecture</title>
+    
+    <link rel="stylesheet" href="https://naveenravi07.github.io/blogs/style.css?h=ba4e332b4e56aa7e4f4a">
+    
+    
+    
+    
+</head>
+<body>
+    
+<header class="space">
+    <a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;">&LeftArrow; Home</a>
+</header>
+
+    
+<main>
+    <h1>Build your own video processing and streaming architecture</h1>
+    
+    <p class="secondary small">
+        1 May, 2024
+
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        - Categories:
+        
+        
+        <a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;categories&#x2F;technology&#x2F;">Technology</a>
+        
+        
+        
+        - Tags:
+        
+        
+        <a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;tags&#x2F;technology&#x2F;">Technology</a>
+        
+        
+    </p>
+    
+    <div class="space"></div>
+    <p>Hey everyone,</p>
+<p>I'm thrilled to share a recent milestone in my personal project journey:
+completing a significant aspect of my video processing infrastructure. I've
+always been fascinated by the mechanics behind platforms like YouTube, which
+seamlessly process video files into multiple qualities in a highly scalable
+manner. While AWS MediaConvert is a popular choice for this task, I've
+discovered a cost-effective alternative that I'm excited to share with you.
+Let's delve into the architecture of my implementation</p>
+<p>Note : In the below diagram there are some basic steps which i dont include in this blog.
+Like creation of preSignedUrl and all as the primary goal of this blog is to
+share the core concepts. So lets dive in</p>
+<img src="https://theshastri.s3.us-west-1.amazonaws.com/videostreamingarchitecture.png" />
+<pre><code>1) Uploading Process: When a user uploads a video, the file is stored in a
+development S3 bucket.
+
+2) Event Handling: Within the S3 environment, we set up event listeners to
+track actions like uploads. Upon each upload event, metadata from the S3
+request is added to an SQS queue. Once the queue reaches a certain
+threshold, a Lambda function is triggered. This queue mechanism ensures
+robustness in handling events, especially in case of errors during Lambda
+execution.
+
+3) The Lambda Function: This function plays a crucial role in orchestrating the
+video processing workflow. It initiates a spot EC2 instance remotely and
+communicates instructions to it. Leveraging spot instances for video
+processing can significantly reduce costs, particularly for
+non-time-sensitive tasks like video transcoding. However, it&#x27;s important to
+consider instance availability and potential interruptions.
+
+4)Processing Instructions: Instructions passed to the EC2 instance typically
+involve a shell script. This script downloads the video from the development
+bucket and utilizes FFmpeg, a versatile tool for video processing. FFmpeg is
+employed to transcode the video into HLS (HTTP Live Streaming) compatible
+streams of varying qualities. The processed video is then uploaded to a
+production S3 bucket.
+
+5) Content Delivery Network (CDN): To ensure optimal delivery speed, HLS
+streams are served from a CDN rather than directly from the production
+bucket. A CDN is a network of distributed proxy servers and data centers
+strategically positioned to minimize latency and maximize performance for
+end-users
+</code></pre>
+<p>This setup forms the backbone of my video processing infrastructure. I'm eagerly
+anticipating its performance and look forward to further enhancements. In the
+pipeline, I plan to integrate additional features such as subtitle generation to
+enrich the viewing experience. Stay tuned for updates as this project evolves!</p>
+
+</main>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://naveenravi07.github.io/blogs/dark_mode.svg" width="24" height="24" alt="Dark mode" aria-label="dark mode toggle" title="Dark mode"></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://naveenravi07.github.io/blogs/light_mode.svg" width="24" height="24" alt="Light mode" aria-label="light mode toggle" title="Light mode"></button>
+    </div>
+    <script>
+        const cls = document.querySelector("html").classList;
+        const sessionTheme = sessionStorage.getItem("theme");
+
+        function setDark() {
+            cls.add("dark-mode");
+            cls.remove("light-mode");
+            sessionStorage.setItem("theme", "dark");
+        }
+        function setLight() {
+            cls.add("light-mode");
+            cls.remove("dark-mode");
+            sessionStorage.setItem("theme", "light");
+        }
+
+        if (sessionTheme === "dark") {
+            setDark();
+        } else if (sessionTheme === "light") {
+            setLight();
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            setDark();
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            setDark();
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            setLight();
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>

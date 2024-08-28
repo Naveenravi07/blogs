@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Shastri&#x27;s Blogs</title>
+    
+    <link rel="stylesheet" href="https://naveenravi07.github.io/blogs/style.css?h=ba4e332b4e56aa7e4f4a">
+    
+    
+    
+    
+</head>
+<body>
+    
+    <header class="space">
+        <h1>Shastri&#x27;s Blogs</h1>
+        
+        
+        <nav class="header-links">
+            
+            <a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;">Home</a>
+            
+            <a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;categories">Categories</a>
+            
+            <a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;tags">Tags</a>
+            
+            
+        </nav>
+        
+    </header>
+    
+    
+    
+    
+    <main>
+        
+        
+        <h2>Recent posts</h2>
+        <ul>
+            
+            <li><a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;blog&#x2F;build-your-own-video-streaming-architecure&#x2F;">Build your own video processing and streaming architecture</a></li>
+            
+            <li><a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;blog&#x2F;why-should-you-need-switch-from-an-ide-to-pde-right-now&#x2F;">Why should you need switch from an IDE to PDE right now</a></li>
+            
+            <li><a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;blog&#x2F;myfirstblog&#x2F;">My First Blog</a></li>
+            
+        </ul>
+        <p><a href="https:&#x2F;&#x2F;naveenravi07.github.io&#x2F;blogs&#x2F;blog&#x2F;">Archive</a></p>
+        
+    </main>
+    
+    
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://naveenravi07.github.io/blogs/dark_mode.svg" width="24" height="24" alt="Dark mode" aria-label="dark mode toggle" title="Dark mode"></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://naveenravi07.github.io/blogs/light_mode.svg" width="24" height="24" alt="Light mode" aria-label="light mode toggle" title="Light mode"></button>
+    </div>
+    <script>
+        const cls = document.querySelector("html").classList;
+        const sessionTheme = sessionStorage.getItem("theme");
+
+        function setDark() {
+            cls.add("dark-mode");
+            cls.remove("light-mode");
+            sessionStorage.setItem("theme", "dark");
+        }
+        function setLight() {
+            cls.add("light-mode");
+            cls.remove("dark-mode");
+            sessionStorage.setItem("theme", "light");
+        }
+
+        if (sessionTheme === "dark") {
+            setDark();
+        } else if (sessionTheme === "light") {
+            setLight();
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            setDark();
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            setDark();
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            setLight();
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>
