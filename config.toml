@@ -1,4 +1,4 @@
-base_url = "https://blogs.theshastrispace.xyz/"
+base_url = "https://naveenravi07.github.io/blogs/"
 compile_sass = true
 generate_feeds = true
 theme = "hook"
