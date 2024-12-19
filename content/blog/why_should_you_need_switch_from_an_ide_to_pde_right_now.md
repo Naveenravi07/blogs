@@ -39,7 +39,7 @@ I installed Linux Mint as my primary operating system and started my Linux journ
 Fast forward to today, here are the major changes that happened to me.
 
 <h2>1 Text Editing </h2> 
-<img src="https://theshastri.s3.us-west-1.amazonaws.com/noevim.jpg" />
+<img src="https://i.imgur.com/66g1HW1.png" />
 Speaking of programming in VSCode, I didn't remember many shortcuts,
 except for Ctrl+P, Ctrl+F, and Ctrl+Shift+F. I know there are a few 
 more, but the editor itself didn't compelled me to use them. I was so lazy 
@@ -61,7 +61,7 @@ NEOVIM BTW" to my friends 🗿 (Oh wait i dont have one to say that)
 </br>
 
 <h2>2 Window Management </h2>
-<img src="https://theshastri.s3.us-west-1.amazonaws.com/dwm.png" />
+<img src="https://i.imgur.com/gCrR23i.png" />
 The window manager is—just like the name describes—a window manager. It controls
 the positioning of windows, their look and feel, etc. I use dwm, which has
 transformed the way I interact with applications and manage windows. Here, I
@@ -74,7 +74,7 @@ applications.
 </br>
 
 <h2>3 Browsing </h2> 
-<img src="https://theshastri.s3.us-west-1.amazonaws.com/archenjoyer.png" />
+<img src="https://i.imgur.com/gzCfd4s.png" />
 I use Firefox browser with the Vimium plugin enabled. It provides keyboard
 shortcuts for navigation and control in the spirit of Vim, which also increases
 my muscle memory with Vim 😉. I highly recommend this plugin for those who wish
