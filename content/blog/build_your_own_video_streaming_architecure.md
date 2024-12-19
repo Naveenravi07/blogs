@@ -23,7 +23,7 @@ Note : In the below diagram there are some basic steps which i dont include in t
 Like creation of preSignedUrl and all as the primary goal of this blog is to
 share the core concepts. So lets dive in
 
-<img src="https://imgur.com/a/M4DHHJ0" />
+<img src="https://i.imgur.com/QF7l80H.png" />
 
     1) Uploading Process: When a user uploads a video, the file is stored in a
     development S3 bucket.
