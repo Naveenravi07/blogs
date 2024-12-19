@@ -23,7 +23,7 @@ Note : In the below diagram there are some basic steps which i dont include in t
 Like creation of preSignedUrl and all as the primary goal of this blog is to
 share the core concepts. So lets dive in
 
-<img src="https://theshastri.s3.us-west-1.amazonaws.com/videostreamingarchitecture.png" />
+<img src="https://imgur.com/a/M4DHHJ0" />
 
     1) Uploading Process: When a user uploads a video, the file is stored in a
     development S3 bucket.
