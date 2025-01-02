@@ -1,5 +1,5 @@
 +++
-title = "Mastering Error Handling in JavaScript: Common Mistakes and Best Practices"
+title = "Mastering Error Handling: Common Mistakes and Best Practices"
 date = 2025-01-02
 
 taxonomies.tags = [
