@@ -1,0 +1,15 @@
+- type: Programming Languages
+  tools: [JavaScript/TypeScript, Rust ]
+
+- type: Frameworks and Libraries
+  tools: [ NestJS, Nextjs, Express.js, Reactjs, Fastify]
+
+- type: Tools and Miscellaneous
+  tools: [Docker,Linux,Neovim]
+
+- type: AWS Services
+  tools: [EC2,S3,Cloudfront,Lambda,SQS,DynamoDB,Spot-Instances]
+
+- type: Databases
+  tools: [Postgres,MongoDB]
+

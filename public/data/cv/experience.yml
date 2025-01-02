@@ -1,0 +1,9 @@
+- employer: Freelance
+  title: Full Stack Developer
+  location: Kerala,India
+  start_date: 2022-06-01
+  end_date:
+  responsibilities:
+  - Worked on developing a CMS project for managing employees at a Kochi-based company
+  - Utilized various technologies including Nextjs,Expressjs,MongoDb,Redis,EC2,S3.
+  - Managed different versions of the software using git.
