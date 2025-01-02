@@ -1,0 +1,9 @@
+<nav id="navbar">
+  {%- for item in config.extra.menu %}
+  {%- if item.redirect %}
+    <a href="{{item.url}}" class="btn">{{ item.name }}</a>
+  {%- else %}
+    <a href="{{ get_url(path=item.url) | safe }}" class="btn">{{ item.name }}</a>
+  {%- endif%}
+  {%- endfor %}
+</nav>
