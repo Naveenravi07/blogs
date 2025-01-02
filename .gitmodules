@@ -1,0 +1,3 @@
+[submodule "themes/hacker"]
+	path = themes/hacker
+	url = git@github.com:en9inerd/zola-hacker.git

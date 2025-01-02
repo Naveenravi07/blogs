@@ -5,6 +5,7 @@ author = "Naveen Ravi"
 compile_sass = true
 minify_html = false
 generate_feeds = true
+theme="hacker"
 
 
 taxonomies = [{ name = "tags" }]
