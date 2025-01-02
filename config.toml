@@ -75,11 +75,11 @@ social_links = [
 
 # Giscus settings
 [extra.giscus]
-repo = "en9inerd/zola-hacker"
-repo_id = "R_kgDOMZOW5g"
+repo = "Naveenravi07/blogs"
+repo_id = "R_kgDOKVNl0w"
 category = "Comments"
-category_id = "DIC_kwDOMZOW5s4ChFNw"
-mapping = "og:title"
+category_id = "DIC_kwDOKVNl084Clrfd"
+mapping = "pathname"
 strict = 0
 reactions_enabled = 1
 emit_metadata = 0
