@@ -83,7 +83,7 @@ This was horizontally scalable: I could add more worker servers to handle more c
 
 At this point, I realized I was reinventing wheels Kubernetes already solved.
 
-<img src="https://s6.imgcdn.dev/YNG4Hl.png" />
+<iframe src="https://drive.google.com/file/d/1q3h8tw690-OI_OYb_WgetwUgyXJDmFMd/preview" width="640" height="480" allow="autoplay"></iframe>
 
 ---
 
