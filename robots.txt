@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /404.html
+Disallow: /files/*
+Allow: /
+Sitemap: https://naveenravi07.github.io/blogs/sitemap.xml

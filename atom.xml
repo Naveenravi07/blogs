@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Shastri&#x27;s Blogs</title>
+    <subtitle>Welcome to my blog :&gt; </subtitle>
+    <link rel="self" type="application/atom+xml" href="https://naveenravi07.github.io/blogs/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://naveenravi07.github.io/blogs/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-11-06T00:00:00+00:00</updated>
+    <id>https://naveenravi07.github.io/blogs/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Part 2: Optimizing the Playground Infrastructure</title>
+        <published>2025-11-06T00:00:00+00:00</published>
+        <updated>2025-11-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Naveen Ravi
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://naveenravi07.github.io/blogs/posts/optimizing-web-coding-playground-infra/"/>
+        <id>https://naveenravi07.github.io/blogs/posts/optimizing-web-coding-playground-infra/</id>
+        
+        <summary type="html">&lt;p&gt;After building the first version of the web coding playground, I started noticing places where the system could be faster, lighter, and more efficient.&lt;br &#x2F;&gt;
+The first challenge I wanted to tackle was &lt;strong&gt;boot time&lt;&#x2F;strong&gt; — how long it took for a containerized environment to become fully operational after being scheduled on Kubernetes. &lt;!-- more --&gt;&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Part 1: Build A Scalable Web Coding Playground Infrastructure</title>
+        <published>2025-08-25T00:00:00+00:00</published>
+        <updated>2025-08-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Naveen Ravi
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://naveenravi07.github.io/blogs/posts/build-a-scalable-web-coding-playground/"/>
+        <id>https://naveenravi07.github.io/blogs/posts/build-a-scalable-web-coding-playground/</id>
+        
+        <summary type="html">&lt;p&gt;I remember the first time I used a sophisticated online coding playground like &lt;strong&gt;codedamn&lt;&#x2F;strong&gt;. It wasn&#x27;t just a single-file snippet editor. It was a full, containerized environment where I could:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spin up an entire &lt;strong&gt;React&lt;&#x2F;strong&gt; or &lt;strong&gt;Next.js&lt;&#x2F;strong&gt; app with preview.&lt;&#x2F;li&gt;
+&lt;li&gt;Run a &lt;strong&gt;Java program&lt;&#x2F;strong&gt; or a &lt;strong&gt;Go code&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Install dependencies, run builds, and see live output—all in the browser.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The experience was incredibly fast, smooth, and reliable. I was blown away. And immediately, the engineer in me asked: &lt;strong&gt;&quot;How on earth is this built?&quot;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This blog is the story of my deep dive into that question. It&#x27;s not a tutorial for a finished product, but a research log of the architectural problems I identified and the potential solutions I explored to build such a system at scale.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Mastering Error Handling: Common Mistakes and Best Practices</title>
+        <published>2025-01-02T00:00:00+00:00</published>
+        <updated>2025-01-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Naveen Ravi
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://naveenravi07.github.io/blogs/posts/mastering-error-handling/"/>
+        <id>https://naveenravi07.github.io/blogs/posts/mastering-error-handling/</id>
+        
+        <summary type="html">&lt;p&gt;Error handling is one of the most critical yet often overlooked aspects of software development.Poor error management can lead to
+confusing bugs, hard-to-maintain code, and a terrible user experience. In this blog, we’ll look at common mistakes developers
+make while handling errors and discuss best practices to handle them effectively.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Stop Being So Opinionated</title>
+        <published>2024-12-30T00:00:00+00:00</published>
+        <updated>2024-12-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Naveen Ravi
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://naveenravi07.github.io/blogs/posts/stop-being-so-opinionated/"/>
+        <id>https://naveenravi07.github.io/blogs/posts/stop-being-so-opinionated/</id>
+        
+        <summary type="html">&lt;p&gt;Aight, today I want to talk about something I see way too often—both online and in real life:&lt;br &#x2F;&gt;
+&lt;strong&gt;the endless hunt for other people’s opinions.&lt;&#x2F;strong&gt;  Just the other day, I saw a post on Reddit where someone asked,
+&lt;q&gt;Should I buy Harkirat&#x27;s cohort course?&lt;&#x2F;q&gt;&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Build your own video processing and streaming architecture</title>
+        <published>2024-05-01T00:00:00+00:00</published>
+        <updated>2024-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Naveen Ravi
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://naveenravi07.github.io/blogs/posts/build-your-own-video-process/"/>
+        <id>https://naveenravi07.github.io/blogs/posts/build-your-own-video-process/</id>
+        
+        <summary type="html">&lt;p&gt;Hey everyone,&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m thrilled to share a recent milestone in my personal project journey:
+completing a significant aspect of my video processing infrastructure. I&#x27;ve
+always been fascinated by the mechanics behind platforms like YouTube, which
+seamlessly process video files into multiple qualities in a highly scalable
+manner. While AWS MediaConvert is a popular choice for this task, I&#x27;ve
+discovered a cost-effective alternative that I&#x27;m excited to share with you.
+Let&#x27;s delve into the architecture of my implementation&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Why should you need switch from an IDE to PDE right now</title>
+        <published>2023-12-26T00:00:00+00:00</published>
+        <updated>2023-12-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Naveen Ravi
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://naveenravi07.github.io/blogs/posts/switch-from-ide-to-pde/"/>
+        <id>https://naveenravi07.github.io/blogs/posts/switch-from-ide-to-pde/</id>
+        
+        <summary type="html">&lt;p&gt;In my following article, I want to tell you why i switched from
+an &lt;strong&gt;IDE&lt;&#x2F;strong&gt; (Integrated Development Environment) to a &lt;strong&gt;PDE&lt;&#x2F;strong&gt; (Personalized Development Environment)&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>My First Blog</title>
+        <published>2023-09-19T00:00:00+00:00</published>
+        <updated>2023-09-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Naveen Ravi
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://naveenravi07.github.io/blogs/posts/first-blog/"/>
+        <id>https://naveenravi07.github.io/blogs/posts/first-blog/</id>
+        
+        <summary type="html">&lt;p&gt;It&#x27;s about 1:28 AM, and I&#x27;m writing my very first blog. For the past month, I&#x27;ve been thinking about
+starting a blog, but I kept procrastinating and wasting my time. I knew I was wasting my time, but I
+just couldn&#x27;t find the motivation to begin. It felt like I was stuck, unable to start. I tried
+learning some technologies, but nothing changed. And today, for God&#x27;s sake, somehow I got the
+motivation to start this. Right now, I&#x27;ve almost covered the technical part of it. &lt;!-- more --&gt;&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

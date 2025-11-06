@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="en-US" xml:lang="en-US">
+  
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="https://naveenravi07.github.io/blogs/favicon-32x32.png">
+<link rel="alternate" type="application/atom+xml" title="Atom feed" href="https://naveenravi07.github.io/blogs/atom.xml">
+<link rel="stylesheet" href="https://naveenravi07.github.io/blogs/main.css">
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=example-tracking-id"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'example-tracking-id');
+</script>
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<title>Part 1: Build A Scalable Web Coding Playground Infrastructure | Shastri's Blogs</title>
+<meta name="generator" content="Zola">
+<meta name="description" content="I remember the first time I used a sophisticated online coding playground like codedamn. It wasn&#x27;t just a single-file snippet editor. It was a full, containerized environment where I could:Spin up an …">
+<meta name="author" content="Naveen Ravi">
+<link rel="canonical" href="https://naveenravi07.github.io/blogs/posts/build-a-scalable-web-coding-playground/">
+  <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://naveenravi07.github.io/blogs/images/logo.png">
+  <meta name="twitter:title" content="Part 1: Build A Scalable Web Coding Playground Infrastructure">
+  <meta name="twitter:description" content="I remember the first time I used a sophisticated online coding playground like codedamn. It wasn&#x27;t just a single-file snippet editor. It was a full, containerized environment where I could:Spin up an …">
+  
+  <meta property="og:title" content="Part 1: Build A Scalable Web Coding Playground Infrastructure">
+  <meta property="og:description" content="I remember the first time I used a sophisticated online coding playground like codedamn. It wasn&#x27;t just a single-file snippet editor. It was a full, containerized environment where I could:Spin up an …">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://naveenravi07.github.io/blogs/posts/build-a-scalable-web-coding-playground/">
+    <meta property="og:image" content="https://naveenravi07.github.io/blogs/images/logo.png">
+
+  <meta property="og:site_name" content="Part 1: Build A Scalable Web Coding Playground Infrastructure">
+  <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2025-08-25T00:00:00+00:00">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://naveenravi07.github.io/blogs/posts/build-a-scalable-web-coding-playground"
+      },
+      "headline": "Part 1: Build A Scalable Web Coding Playground Infrastructure",
+      "description": "I remember the first time I used a sophisticated online coding playground like codedamn. It wasn&#x27;t just a single-file snippet editor. It was a full, containerized environment where I could:Spin up an …",
+      "wordcount": "1405",
+      "datePublished": "2025-08-25T00:00:00+00:00",
+      "dateModified": "2025-08-25T00:00:00+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "Naveen Ravi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Part 1: Build A Scalable Web Coding Playground Infrastructure",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://naveenravi07.github.io/blogs/images/logo.png"
+        }
+      }
+    }
+    </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a id="a-title" href="https://naveenravi07.github.io/blogs">
+        <h1>Shastri&#x27;s Blogs</h1>
+      </a>
+      <h2>Welcome to my blog :&gt; </h2>
+      <nav id="navbar">
+    <a href="https:&#x2F;&#x2F;theshastrispace.xyz" class="btn">Website</a>
+    <a href="https://naveenravi07.github.io/blogs/about" class="btn">About</a>
+    <a href="https://naveenravi07.github.io/blogs/tags" class="btn">Tags</a>
+</nav>
+</div>
+  </header>
+
+  <div class="container">
+    <main>
+<article class="page">
+  <div class="header-container">
+    <h2>Part 1: Build A Scalable Web Coding Playground Infrastructure</h2>
+    <div class="improve hide-on-mobiles">
+    </div>
+  </div>
+  <div class="page-info">
+    <span>Tags = [
+      <a href="https://naveenravi07.github.io/blogs/tags/technology/" class="page-tag">Technology</a> ]
+    </span>
+    <time class="page-time smaller" datetime="2025-08-25T00:00:00+00:00">
+      Posted on August 25, 2025 at 00:00 UTC
+    </time>
+  </div>
+  <div class="entry">
+    <p>I remember the first time I used a sophisticated online coding playground like <strong>codedamn</strong>. It wasn't just a single-file snippet editor. It was a full, containerized environment where I could:</p>
+<ul>
+<li>Spin up an entire <strong>React</strong> or <strong>Next.js</strong> app with preview.</li>
+<li>Run a <strong>Java program</strong> or a <strong>Go code</strong>.</li>
+<li>Install dependencies, run builds, and see live output—all in the browser.</li>
+</ul>
+<p>The experience was incredibly fast, smooth, and reliable. I was blown away. And immediately, the engineer in me asked: <strong>"How on earth is this built?"</strong></p>
+<p>This blog is the story of my deep dive into that question. It's not a tutorial for a finished product, but a research log of the architectural problems I identified and the potential solutions I explored to build such a system at scale.</p>
+<span id="continue-reading"></span>
+<hr />
+<h2 id="the-core-challenge-beyond-single-file-snippets">The Core Challenge: Beyond Single-File Snippets</h2>
+<p>Most basic playgrounds are simple. You paste code into a <code>&lt;textarea&gt;</code>, it gets POSTed to an API, run in a sandboxed Lambda function, and the result comes back. But that model breaks down completely when you need:</p>
+<ul>
+<li>A persistent, stateful environment.</li>
+<li>Multiple files and a real filesystem.</li>
+<li>Running servers and processes.</li>
+<li>An interactive terminal.</li>
+</ul>
+<p>The fundamental unit shifts from a <em>function</em> to a <em>container</em> (or a virtual machine). Each user session needs its own isolated, containerized environment. The challenge becomes how to manage thousands of these containers efficiently.</p>
+<hr />
+<h2 id="problem-1-the-shared-filesystem">Problem 1: The Shared Filesystem</h2>
+<p>Each interactive session requires at least two components working in tandem:</p>
+<ol>
+<li>A <strong>WebSocket Server</strong>: Handles real-time events like file edits, terminal keystrokes, and UI updates.</li>
+<li>A <strong>Runtime Container</strong>: The language-specific environment (e.g., Node, Python, Go) that executes the code.</li>
+</ol>
+<p><strong>Both need instantaneous access to the exact same files.</strong> When a user edits <code>index.js</code>, the runtime container must see that change immediately.</p>
+<p>I researched several ways to achieve this shared storage:</p>
+<ul>
+<li><strong>AWS EFS (Elastic File System)</strong>:  A managed NFS. I chose this because i thought i could save user coding projects in the cloud itself without extra hazzles.It works, but each new mount can take ~10 seconds to initialize. This delay kills the "real-time" feel you expect from a modern IDE.</li>
+<li><strong>S3 with S3FS</strong>: Tempting because of S3's durability and scale. However, S3 is object storage, not a POSIX filesystem. Operations like <code>ls</code> or editing a small file in a large directory become painfully slow.</li>
+<li><strong>Docker Volumes</strong>: The simplest and fastest option. You create a volume on the host machine, mount it into both containers, and they see the same files instantly. No network latency, no initialization penalty.</li>
+</ul>
+<p><strong>Verdict:</strong> For pure performance and simplicity, a shared volume (or a hostPath) is the winner. This simplicity becomes a key constraint later.</p>
+<hr />
+<h2 id="problem-2-orchestrating-the-chaos">Problem 2: Orchestrating the Chaos</h2>
+<p>You can't just run <code>docker run</code> on a server for every new user. You need a system to orchestrate hundreds of dynamic, short-lived environments.</p>
+<hr />
+<h3 id="my-very-first-attempt-ecs">My Very First Attempt: ECS</h3>
+<p>Initially, I was using <strong>AWS ECS</strong> to spawn a coding playground per session. It looked promising on paper: I could define tasks, attach storage (EFS), and scale out.</p>
+<p>But the problems I mentioned earlier (slow mounts with EFS, clunky debugging, slow feedback loops) made development extremely worse. Each iteration took too long, and the experience felt nowhere near the "instant" responsiveness of a coding IDE.</p>
+<p>Another big factor: I was broke (^-^) and simply couldn’t afford the rising AWS bills for experimentation. Every failed iteration or slow debug cycle felt like I was burning cash faster than my containers were booting.</p>
+<p>So yeah… I started looking for something simpler, cheaper, and faster.</p>
+<hr />
+<h3 id="my-next-attempt-a-queue-worker-model">My Next Attempt: A Queue + Worker Model</h3>
+<p>To move away from ECS overhead, I experimented with a <strong>message queue + horizontal scaling approach</strong>:</p>
+<ul>
+<li>A main API server received requests to create a new playground.</li>
+<li>It published a message with a <code>sessionId</code> and configuration into a <strong>message queue</strong> (like Redis or RabbitMQ).</li>
+<li>A pool of <strong>worker servers</strong> consumed the queue. Each worker would:
+<ul>
+<li>Pull a job.</li>
+<li>Clone a base template repository.</li>
+<li>Use <code>docker-compose</code> to spin up the WebSocket and runtime containers, binding them to the shared volume and mapping ports.</li>
+</ul>
+</li>
+</ul>
+<p>This was horizontally scalable: I could add more worker servers to handle more concurrent playgrounds.</p>
+<p><strong>What I learned:</strong> This worked better than ECS for quick experimentation, but it came with its own problems. I was essentially building a brittle, custom orchestration layer. Managing lifecycle, cleaning up containers, and handling service discovery became messy fast.</p>
+<p>At this point, I realized I was reinventing wheels Kubernetes already solved.</p>
+<iframe src="https://drive.google.com/file/d/1q3h8tw690-OI_OYb_WgetwUgyXJDmFMd/preview" width="640" height="480" allow="autoplay"></iframe>
+<hr />
+<h2 id="problem-2-1-the-networking-nightmare">Problem 2.1: The Networking Nightmare</h2>
+<p>Every playground might need to expose a web server (e.g., a Next.js app on port 3000). How do you route user traffic to the correct container?</p>
+<ul>
+<li><strong>Static Port Mapping</strong>: Assign a unique external port to each session (e.g., user A gets <code>:4001</code>, user B gets <code>:4002</code>). This is a nightmare to manage and scale. You quickly run out of ports, and configuring the reverse proxy dynamically is messy.</li>
+<li><strong>Dynamic Reverse Proxy</strong>: I tried <strong>Traefik</strong> and <strong>Caddy</strong> with their Docker provider plugins. They can automatically discover containers and configure routes. This was closer. You could route <code>user1.yourdomain.com</code> to the correct container.</li>
+</ul>
+<p>But making this rock-solid with wildcard DNS and TLS, especially in development, felt complex. I was spending more time on plumbing than on the product.</p>
+<hr />
+<h2 id="the-aha-moment-embracing-kubernetes">The "Aha!" Moment: Embracing Kubernetes</h2>
+<p>I realized I was painstakingly reassembling pieces that <strong>Kubernetes</strong> provides out of the box. Instead of fighting it, I designed a new architecture around it.</p>
+<p>Here’s how a scalable playground system can work on Kubernetes:</p>
+<ol>
+<li>
+<p><strong>Session as a Job</strong>: Each coding environment is defined as a <strong>Kubernetes Job</strong>. This Job is responsible for creating the Pod that contains both the WebSocket server and runtime containers, sharing a volume for the code.</p>
+</li>
+<li>
+<p><strong>Internal Service</strong>: Each Job gets its own headless <strong>Kubernetes Service</strong>. This provides a stable internal DNS name (e.g., <code>session-abc123.default.svc.cluster.local</code>) for the Pod, allowing other components in the cluster to talk to it easily.</p>
+</li>
+<li>
+<p><strong>Ingress for External Traffic</strong>: A single <strong>Ingress Controller</strong> (like Traefik or Nginx) handles all incoming HTTP/S traffic.</p>
+<ul>
+<li>A wildcard DNS record (<code>*.playground.yourdomain.com</code>) points to the Ingress.</li>
+<li>The Ingress uses a simple path or hostname-based rule: a request to <code>s1.playground.yourdomain.com</code> is routed to the Service for session <code>s1</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Local Development</strong>: For testing, you can use <code>minikube</code> or <code>kind</code>. Adding a line to your <code>/etc/hosts</code> file (<code>127.0.0.1 s1.playground.yourdomain.com</code>) and configuring the Ingress lets you test the entire flow seamlessly on your local machine.</p>
+</li>
+</ol>
+<p>Kubernetes solves the hard problems elegantly:</p>
+<ul>
+<li><strong>Orchestration</strong>: It manages the lifecycle of the Pods (containers).</li>
+<li><strong>Networking</strong>: Services and Ingress handle discovery and routing.</li>
+<li><strong>Storage</strong>: Persistent Volume Claims (PVCs) abstract the shared storage perfectly.</li>
+<li><strong>Scaling</strong>: The entire system can scale horizontally across a cluster of nodes.</li>
+</ul>
+<hr />
+<h2 id="key-takeaways-from-my-research">Key Takeaways from My Research</h2>
+<ol>
+<li><strong>Start Simple, Then Scale</strong>: A simple Docker-based worker model is a great starting point to validate the idea. Don't jump to Kubernetes on day one.</li>
+<li><strong>Volumes Over Networked FS</strong>: For the low-latency filesystem needs of an IDE, local volumes are superior to networked filesystems like EFS or S3FS at the beginning.</li>
+<li><strong>You Aren't Google (Yet)</strong>: Avoid building custom orchestration. Kubernetes is a complex tool, but it's a solved complex tool. Leveraging it lets you focus on your application logic instead of infrastructure plumbing.</li>
+<li><strong>Ingress is Key</strong>: A wildcard DNS record paired with a modern Ingress Controller is the cleanest way to handle routing to dynamic, multi-tenant services.</li>
+</ol>
+<hr />
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>The magic of platforms like codedamn isn't just in the UI—it's in the incredibly sophisticated cloud-native infrastructure that powers it. My journey to understand it was a deep dive into containers, orchestration, and distributed systems design.</p>
+<p>While I set out to <em>build</em> a playground, what I really built was a blueprint. The final, production-grade system would need more: resource limits, security policies, permission management in pods, session timeouts, and snapshotting. But the foundation is clear: <strong>Kubernetes provides the primitives to make this not just possible, but elegant and scalable.</strong></p>
+<p>This post just scratches the surface.</p>
+<p>In the next part, I’ll either:</p>
+<ul>
+<li>Dig deeper into solving some inefficiencies in the current infra design,</li>
+<li>Or break down the <strong>Kubernetes Job model</strong> and the <strong>application layer</strong> that ties it all together.</li>
+</ul>
+<p>And maybe after that… yes, the <strong>Language Server Protocol (LSP)</strong> integration story awaits. 🚀</p>
+
+  </div><div class="giscus comments"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="Naveenravi07&#x2F;blogs"
+        data-repo-id="R_kgDOKVNl0w"
+        data-category="Comments"
+        data-category-id="DIC_kwDOKVNl084Clrfd"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+
+    </main>
+  </div>
+  <footer>
+    <a href="mailto:naveenkeezhoor@gmail.com"><i class="svg-icon icon-mail"></i></a>
+    <a href="https://github.com/Naveenravi07"><i class="svg-icon icon-github-circled"></i></a>
+    <a href="https://www.linkedin.com/in/naveen-ravi-97b158229"><i class="svg-icon icon-linkedin"></i></a>
+    <a href="https://instagram.com/shastri_fps"><i class="svg-icon icon-instagram"></i></a>
+    <a href="https://www.twitter.com/naveenravi007"><i class="svg-icon icon-twitter"></i></a>
+<span class="copyright">&copy; 2023 - 2025 Naveen Ravi</span>
+</footer>
+</body>
+
+</html>

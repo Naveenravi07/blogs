@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en-US" xml:lang="en-US">
+  
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="https://naveenravi07.github.io/blogs/favicon-32x32.png">
+<link rel="alternate" type="application/atom+xml" title="Atom feed" href="https://naveenravi07.github.io/blogs/atom.xml">
+<link rel="stylesheet" href="https://naveenravi07.github.io/blogs/main.css">
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=example-tracking-id"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'example-tracking-id');
+</script>
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<title>Part 2: Optimizing the Playground Infrastructure | Shastri's Blogs</title>
+<meta name="generator" content="Zola">
+<meta name="description" content="After building the first version of the web coding playground, I started noticing places where the system could be faster, lighter, and more efficient.
+The first challenge I wanted to tackle was boot …">
+<meta name="author" content="Naveen Ravi">
+<link rel="canonical" href="https://naveenravi07.github.io/blogs/posts/optimizing-web-coding-playground-infra/">
+  <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://naveenravi07.github.io/blogs/images/logo.png">
+  <meta name="twitter:title" content="Part 2: Optimizing the Playground Infrastructure">
+  <meta name="twitter:description" content="After building the first version of the web coding playground, I started noticing places where the system could be faster, lighter, and more efficient.
+The first challenge I wanted to tackle was boot …">
+  
+  <meta property="og:title" content="Part 2: Optimizing the Playground Infrastructure">
+  <meta property="og:description" content="After building the first version of the web coding playground, I started noticing places where the system could be faster, lighter, and more efficient.
+The first challenge I wanted to tackle was boot …">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://naveenravi07.github.io/blogs/posts/optimizing-web-coding-playground-infra/">
+    <meta property="og:image" content="https://naveenravi07.github.io/blogs/images/logo.png">
+
+  <meta property="og:site_name" content="Part 2: Optimizing the Playground Infrastructure">
+  <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2025-11-06T00:00:00+00:00">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://naveenravi07.github.io/blogs/posts/optimizing-web-coding-playground-infra"
+      },
+      "headline": "Part 2: Optimizing the Playground Infrastructure",
+      "description": "After building the first version of the web coding playground, I started noticing places where the system could be faster, lighter, and more efficient.
+The first challenge I wanted to tackle was boot …",
+      "wordcount": "844",
+      "datePublished": "2025-11-06T00:00:00+00:00",
+      "dateModified": "2025-11-06T00:00:00+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "Naveen Ravi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Part 2: Optimizing the Playground Infrastructure",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://naveenravi07.github.io/blogs/images/logo.png"
+        }
+      }
+    }
+    </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a id="a-title" href="https://naveenravi07.github.io/blogs">
+        <h1>Shastri&#x27;s Blogs</h1>
+      </a>
+      <h2>Welcome to my blog :&gt; </h2>
+      <nav id="navbar">
+    <a href="https:&#x2F;&#x2F;theshastrispace.xyz" class="btn">Website</a>
+    <a href="https://naveenravi07.github.io/blogs/about" class="btn">About</a>
+    <a href="https://naveenravi07.github.io/blogs/tags" class="btn">Tags</a>
+</nav>
+</div>
+  </header>
+
+  <div class="container">
+    <main>
+<article class="page">
+  <div class="header-container">
+    <h2>Part 2: Optimizing the Playground Infrastructure</h2>
+    <div class="improve hide-on-mobiles">
+    </div>
+  </div>
+  <div class="page-info">
+    <span>Tags = [
+      <a href="https://naveenravi07.github.io/blogs/tags/technology/" class="page-tag">Technology</a>,
+      <a href="https://naveenravi07.github.io/blogs/tags/infrastructure/" class="page-tag">Infrastructure</a> ]
+    </span>
+    <time class="page-time smaller" datetime="2025-11-06T00:00:00+00:00">
+      Posted on November  6, 2025 at 00:00 UTC
+    </time>
+  </div>
+  <div class="entry">
+    <p>After building the first version of the web coding playground, I started noticing places where the system could be faster, lighter, and more efficient.<br />
+The first challenge I wanted to tackle was <strong>boot time</strong> — how long it took for a containerized environment to become fully operational after being scheduled on Kubernetes. <!-- more --></p>
+<span id="continue-reading"></span><br>
+<h2 id="the-boot-time-problem"><strong>The Boot-Time Problem</strong></h2>
+<p>Initially, each playground’s Docker image (Next.js, Svelte, etc.) included its own <code>node_modules</code> folder.<br />
+This made every image <strong>large and heavy</strong>, even though most dependencies didn’t need to be pre-packaged.</p>
+<p>While Kubernetes only pulls an image if it doesn’t exist on a node or the tag changes, image size still matters in a scalable system.</p>
+<p>To fix this, I redesigned the Docker setup.<br />
+Each image now focuses purely on:</p>
+<ul>
+<li>Creating a <strong>dedicated user</strong> for the playground</li>
+<li>Pulling the <strong>base runtime image</strong> (Node, Go, etc.)</li>
+<li>Exposing the <strong>required port</strong> for the service</li>
+</ul>
+<h2 id="dockerfile-example"><strong>Dockerfile Example</strong></h2>
+<p>Here’s an example of how the simplified Dockerfile for a playground container looks after optimization:</p>
+<pre data-lang="dockerfile" style="background-color:#2b2c2f;color:#cccece;" class="language-dockerfile "><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#c594c5;">FROM</span><span> node:22-alpine </span><span style="color:#c594c5;">AS </span><span>development
+</span><span style="color:#c594c5;">RUN </span><span>addgroup -S coder &amp;&amp; adduser -S coder -G coder -h /home/coder
+</span><span style="color:#c594c5;">RUN </span><span>mkdir -p /home/coder/workspace &amp;&amp; chown -R coder:coder /home/coder
+</span><span style="color:#c594c5;">WORKDIR </span><span>/home/coder/workspace
+</span><span style="color:#c594c5;">COPY</span><span> --chown=coder:coder package.json ./
+</span><span style="color:#c594c5;">USER </span><span>coder
+</span><span style="color:#c594c5;">COPY</span><span> --chown=coder:coder . .
+</span><span style="color:#c594c5;">EXPOSE </span><span>3000
+</span><span style="color:#5fb3b3;">CMD </span><span>[</span><span style="color:#5fb3b3;">&quot;</span><span style="color:#99c794;">tail</span><span style="color:#5fb3b3;">&quot;</span><span>, </span><span style="color:#5fb3b3;">&quot;</span><span style="color:#99c794;">-f</span><span style="color:#5fb3b3;">&quot;</span><span>, </span><span style="color:#5fb3b3;">&quot;</span><span style="color:#99c794;">/dev/null</span><span style="color:#5fb3b3;">&quot;</span><span>]
+</span></code></pre>
+<p>No more pre-bundled dependencies inside the container.</p>
+<p>Instead, I introduced a configuration file called <strong><code>.cdmrc</code></strong> (short for <em>codedamn config</em>, inspired by where the idea started).<br />
+Each playground template now ships with a <code>.cdmrc</code> file that lists the commands required to install and run the project.</p>
+<pre data-lang="bash" style="background-color:#2b2c2f;color:#cccece;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5f6364;"># .cdmrc for a Next.js playground
+</span><span style="color:#6699cc;">npm install
+</span><span style="color:#6699cc;">npm run dev
+</span></code></pre>
+<p>The frontend was updated to parse this file on startup, automatically open a terminal, and execute the commands dynamically.<br />
+This made the environments <strong>lighter, faster, and more flexible</strong>, and it decoupled build logic from the container itself.</p>
+<p>I wouldn’t say this is the best approach though, since it <strong>tightly couples the creation of a playground with the client</strong>.<br />
+I actually tried another interesting design where the <strong>WebSocket container</strong> inside the playground parsed the <code>.cdmrc</code> file located in the <strong>user-service container</strong> and executed the commands by itself.<br />
+This approach worked well in theory and removed client dependency — but it introduced a new issue.<br />
+The WebSocket container was only <strong>streaming the command outputs as text</strong> to the frontend, meaning the terminal wasn’t truly interactive.<br />
+You couldn’t press keys like <code>Ctrl + C</code> or run additional commands mid-session — it behaved more like a log viewer than a live terminal.<br />
+That broke the whole “interactive coding” feel I was aiming for, so I shelved this version for now.</p>
+<br>
+<h2 id="to-do-if-i-ever-continue"><strong>To-Do (If I Ever Continue)</strong></h2>
+<p>After optimizing the performance side, I had a few more ideas that I wanted to explore if I decided to continue this project later.</p>
+<h3 id="1-add-proper-lsp-support"><strong>1. Add Proper LSP Support</strong></h3>
+<p>One of the most interesting next steps would have been to <strong>add real Language Server Protocol (LSP) support</strong>, not just some fake workers that mimic code completions.<br />
+Since all the source code already exists on a shared volume, we could spin up a <strong>new container inside each playground pod</strong> to run a language-specific LSP server.</p>
+<p>The <strong>WebSocket container</strong> could then proxy requests to that LSP container — upgrading the connection to a WebSocket and relaying all LSP operations back to the frontend.<br />
+That way, the browser would receive real diagnostics, completions, and symbol lookups from the actual LSP server.</p>
+<p><em>(I might be slightly off on the implementation details — this idea came toward the end of the project and I didn’t dive deep into it yet.)</em></p>
+<p>Alternatively, for simplicity, the LSP could run <strong>inside the WebSocket container itself</strong>, but that would make the image insanely heavy and harder to maintain.<br />
+It would also require custom logic to detect the project’s language and start the right LSP.</p>
+<p>Personally, I’d go with <strong>approach #1</strong> — a separate, lightweight LSP container per playground.</p>
+<br>
+<h3 id="2-add-collaborative-editing-video-calling"><strong>2. Add Collaborative Editing &amp; Video Calling</strong></h3>
+<p>Another idea was to add <strong>collaborative editing</strong> and <strong>peer-to-peer video calls</strong> so multiple users could share the same playground session.<br />
+This would make it perfect for <strong>mock interviews, pair programming, or teaching setups</strong>.</p>
+<p>I’ve already built systems with <strong>WebRTC</strong> and <strong>Mediasoup</strong>, so technically it’s feasible.<br />
+But implementing real-time sync and state consistency for multiple terminals would require a lot of effort — and honestly, after finishing the core infra, I didn’t have the same drive to push this part through.<br />
+Still, it’s a direction that would make the playground feel alive.</p>
+<br>
+<h3 id="3-migrate-from-node-to-bun"><strong>3. Migrate From Node to Bun</strong></h3>
+<p>Another idea on my list was to <strong>migrate from Node.js to Bun</strong>.<br />
+It’s simpler, faster, and has built-in tooling that could make both container builds and dependency installs quicker.<br />
+This would help reduce startup time even further and simplify the dev experience across all playgrounds.</p>
+<br>
+<h2 id="wrapping-up"><strong>Wrapping Up</strong></h2>
+<p>This project started as an attempt to understand how <strong>modern coding environments scale</strong>, and along the way, it became a crash course in <strong>containers, orchestration, and distributed systems design</strong>.</p>
+<p>I’ve learned more than I expected — from optimizing Docker images to building real-time infrastructure that actually feels responsive.<br />
+And while I’m not continuing this project further, it served its purpose perfectly: helping me understand the systems behind scalable cloud developer platforms.</p>
+<p>Sometimes, stopping is part of the process.<br />
+Not every project has to become a product — some just need to teach you what you wanted to learn.</p>
+
+  </div><div class="giscus comments"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="Naveenravi07&#x2F;blogs"
+        data-repo-id="R_kgDOKVNl0w"
+        data-category="Comments"
+        data-category-id="DIC_kwDOKVNl084Clrfd"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+
+    </main>
+  </div>
+  <footer>
+    <a href="mailto:naveenkeezhoor@gmail.com"><i class="svg-icon icon-mail"></i></a>
+    <a href="https://github.com/Naveenravi07"><i class="svg-icon icon-github-circled"></i></a>
+    <a href="https://www.linkedin.com/in/naveen-ravi-97b158229"><i class="svg-icon icon-linkedin"></i></a>
+    <a href="https://instagram.com/shastri_fps"><i class="svg-icon icon-instagram"></i></a>
+    <a href="https://www.twitter.com/naveenravi007"><i class="svg-icon icon-twitter"></i></a>
+<span class="copyright">&copy; 2023 - 2025 Naveen Ravi</span>
+</footer>
+</body>
+
+</html>
